@@ -1,0 +1,33 @@
+{
+  "fornitori": {
+    "telaio": {
+      "nome": "Urban Lab Prototyping",
+      "contatto": "info@urbanlab.it",
+      "telefono": "+39 0541 123456",
+      "indirizzo": "Via Bonsi, Rimini",
+      "specialità": "Fibra di carbonio"
+    },
+    "batterie": {
+      "nome": "Battery Tech Italia",
+      "contatto": "sales@batterytech.it",
+      "telefono": "+39 02 1234567",
+      "certificazioni": ["UN38.3", "IEC 62133"]
+    },
+    "motori": {
+      "nome": "Bafang Italia",
+      "contatto": "info@bafang.it",
+      "certificazioni": ["EN 60034"],
+      "garanzia": "24 mesi"
+    },
+    "elettronica": {
+      "nome": "Mouser Electronics",
+      "contatto": "italy@mouser.com",
+      "componenti": ["ESP32", "Sensori"]
+    },
+    "certificazioni": {
+      "nome": "ECM Italia",
+      "contatto": "info@ecmitalia.it",
+      "servizi": ["CE Marking", "Testing"]
+    }
+  }
+}
