@@ -1,0 +1,3 @@
+Urban Lab Policy ONNX (stub)
+Input: 6 (velocità, inclinazione, batteria, distanza, RPM, temperatura)
+Output: 3 (accelerazione, frenata, sterzo)
