@@ -1,29 +1,54 @@
-﻿{
+{
   "componenti": {
     "telaio": {
       "nome": "Telaio in fibra di carbonio",
       "codice": "UB-FC-001",
       "fornitore": "Urban Lab",
       "costo": 450,
-      "specifiche": "120x40cm, 2.5kg"
+      "specifiche": "120x40cm, 2.5kg",
+      "stato": "disponibile"
     },
     "motore": {
       "nome": "Motore Brushless 800W",
       "codice": "UB-BL-002",
       "fornitore": "Bafang",
       "costo": 180,
-      "specifiche": "48V, 3000 RPM"
+      "specifiche": "48V, 3000 RPM",
+      "stato": "ordinato"
     },
     "batteria": {
       "nome": "Batteria LiFePO4 48V",
       "codice": "UB-BAT-003",
       "fornitore": "LG",
       "costo": 320,
-      "specifiche": "20Ah, 1000 cicli"
+      "specifiche": "20Ah, 1000 cicli",
+      "stato": "disponibile"
+    },
+    "controller": {
+      "nome": "Controller VESC 60A",
+      "codice": "UB-VESC-004",
+      "fornitore": "Makerbase",
+      "costo": 85,
+      "specifiche": "12S, 60A",
+      "stato": "disponibile"
+    },
+    "esp32": {
+      "nome": "ESP32 DevKit",
+      "codice": "UB-ESP-005",
+      "fornitore": "Espressif",
+      "costo": 18,
+      "specifiche": "WiFi/BLE, AI processor",
+      "stato": "disponibile"
     }
   },
   "totali": {
-    "componenti": 3,
-    "costo_totale": 950
+    "componenti": 5,
+    "costo_totale": 1053,
+    "stato": "progettazione"
+  },
+  "urban_lab": {
+    "location": "Via Bonsi, Rimini",
+    "project": "Monopattino del Futuro",
+    "version": "1.0.0"
   }
 }
