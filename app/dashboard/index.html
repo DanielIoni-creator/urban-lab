@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Lab Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+            padding: 20px;
+        }
+        .dashboard {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: #1a1a1a;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            border: 1px solid #333;
+        }
+        .header h1 {
+            font-size: 28px;
+            color: #4CAF50;
+        }
+        .status {
+            padding: 10px 20px;
+            border-radius: 20px;
+            background: #1B5E20;
+        }
+        .status.online { background: #1B5E20; }
+        .status.offline { background: #B71C1C; }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .card {
+            background: #1a1a1a;
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid #333;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #4CAF50;
+        }
+        .card-icon { font-size: 40px; margin-bottom: 10px; }
+        .card-label { color: #888; font-size: 14px; }
+        .card-value { 
+            font-size: 32px; 
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .card-value.green { color: #4CAF50; }
+        .card-value.orange { color: #FF9800; }
+        .card-value.red { color: #f44336; }
+        .card-value.blue { color: #2196F3; }
+        
+        .controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            background: #1a1a1a;
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid #333;
+            margin-bottom: 30px;
+        }
+        .btn {
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn:hover { transform: scale(1.05); }
+        .btn-green { background: #4CAF50; color: white; }
+        .btn-red { background: #f44336; color: white; }
+        .btn-orange { background: #FF9800; color: white; }
+        .btn-blue { background: #2196F3; color: white; }
+        .btn-purple { background: #9C27B0; color: white; }
+        
+        .chart-container {
+            background: #1a1a1a;
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid #333;
+        }
+        .chart-container canvas {
+            width: 100% !important;
+            height: 300px !important;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            margin-top: 30px;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+        .pulse { animation: pulse 2s infinite; }
+        
+        @media (max-width: 768px) {
+            .header { flex-direction: column; gap: 15px; text-align: center; }
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Header -->
+        <div class="header">
+            <div>
+                <h1>🏭 Urban Lab</h1>
+                <p style="color: #888;">Monopattino del Futuro - Dashboard</p>
+            </div>
+            <div>
+                <span class="status online" id="statusBadge">● ONLINE</span>
+                <span style="margin-left: 15px; color: #888;">v1.0.0</span>
+            </div>
+        </div>
+
+        <!-- Dati in tempo reale -->
+        <div class="grid" id="dataGrid">
+            <div class="card">
+                <div class="card-icon">⚡</div>
+                <div class="card-label">Velocità</div>
+                <div class="card-value green" id="speed">0.0 km/h</div>
+            </div>
+            <div class="card">
+                <div class="card-icon">🔋</div>
+                <div class="card-label">Batteria</div>
+                <div class="card-value green" id="battery">100%</div>
+            </div>
+            <div class="card">
+                <div class="card-icon">🌡️</div>
+                <div class="card-label">Temperatura Motore</div>
+                <div class="card-value orange" id="temp">25°C</div>
+            </div>
+            <div class="card">
+                <div class="card-icon">📍</div>
+                <div class="card-label">GPS</div>
+                <div class="card-value blue" id="gps">44.0576°N</div>
+                <div style="color: #888; font-size: 12px;" id="gpsLon">12.5653°E</div>
+            </div>
+            <div class="card">
+                <div class="card-icon">📡</div>
+                <div class="card-label">Stato</div>
+                <div class="card-value green" id="status">In Movimento</div>
+            </div>
+            <div class="card">
+                <div class="card-icon">🧠</div>
+                <div class="card-label">AI Status</div>
+                <div class="card-value green" id="aiStatus">Attivo</div>
+            </div>
+        </div>
+
+        <!-- Controlli -->
+        <div class="controls">
+            <button class="btn btn-green" onclick="sendCommand('unlock')">🔓 Sblocca</button>
+            <button class="btn btn-red" onclick="sendCommand('lock')">🔒 Blocca</button>
+            <button class="btn btn-orange" onclick="sendCommand('light')">💡 Luci</button>
+            <button class="btn btn-blue" onclick="sendCommand('horn')">📢 Clacson</button>
+            <button class="btn btn-purple" onclick="sendCommand('ai')">🤖 Chiedi a Pytho</button>
+        </div>
+
+        <!-- AI Diagnostics -->
+        <div class="card" style="margin-bottom: 30px;">
+            <h3 style="color: #4CAF50; margin-bottom: 15px;">🧠 AI Diagnostics</h3>
+            <div id="aiDiagnostics">
+                <p style="color: #888;">✅ Sistema operativo</p>
+                <p style="color: #888;">✅ Sensori calibrati</p>
+                <p style="color: #888;">✅ Batteria in salute</p>
+                <p style="color: #888;">✅ Connettività attiva</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>🏭 Urban Lab Rimini - Via Bonsi | Il futuro della mobilità sostenibile</p>
+            <p style="margin-top: 5px;">Ultimo aggiornamento: <span id="lastUpdate">--</span></p>
+        </div>
+    </div>
+
+    <script>
+        // Simula dati in tempo reale
+        let speed = 0;
+        let battery = 100;
+        let temp = 25;
+        let lat = 44.0576;
+        let lon = 12.5653;
+        let moving = false;
+
+        function updateDashboard() {
+            // Simula movimento
+            if (moving) {
+                speed = Math.random() * 20;
+                battery -= 0.05;
+                if (battery < 0) battery = 0;
+                temp += Math.random() * 0.2;
+                lat += (Math.random() - 0.5) * 0.0001;
+                lon += (Math.random() - 0.5) * 0.0001;
+            } else {
+                speed = 0;
+                if (temp > 25) temp -= 0.1;
+            }
+
+            // Aggiorna UI
+            document.getElementById('speed').textContent = speed.toFixed(1) + ' km/h';
+            document.getElementById('battery').textContent = Math.round(battery) + '%';
+            document.getElementById('temp').textContent = temp.toFixed(1) + '°C';
+            document.getElementById('gps').textContent = lat.toFixed(4) + '°N';
+            document.getElementById('gpsLon').textContent = lon.toFixed(4) + '°E';
+            document.getElementById('status').textContent = moving ? 'In Movimento' : 'Fermo';
+            document.getElementById('status').className = 'card-value ' + (moving ? 'green' : 'orange');
+            
+            // Colore batteria
+            const batteryEl = document.getElementById('battery');
+            if (battery < 20) {
+                batteryEl.className = 'card-value red';
+            } else if (battery < 50) {
+                batteryEl.className = 'card-value orange';
+            } else {
+                batteryEl.className = 'card-value green';
+            }
+
+            // Colore temperatura
+            const tempEl = document.getElementById('temp');
+            if (temp > 45) {
+                tempEl.className = 'card-value red';
+            } else if (temp > 35) {
+                tempEl.className = 'card-value orange';
+            } else {
+                tempEl.className = 'card-value green';
+            }
+
+            document.getElementById('lastUpdate').textContent = new Date().toLocaleTimeString();
+        }
+
+        function toggleMovement() {
+            moving = !moving;
+            document.getElementById('status').textContent = moving ? 'In Movimento' : 'Fermo';
+        }
+
+        function sendCommand(command) {
+            const statusBadge = document.getElementById('statusBadge');
+            statusBadge.textContent = '● COMANDO ' + command.toUpperCase();
+            statusBadge.className = 'status online pulse';
+            
+            setTimeout(() => {
+                statusBadge.textContent = '● ONLINE';
+                statusBadge.className = 'status online';
+            }, 2000);
+
+            console.log('Comando inviato:', command);
+        }
+
+        // Aggiorna ogni secondo
+        setInterval(updateDashboard, 1000);
+
+        // Primo aggiornamento
+        updateDashboard();
+
+        // Toggle movimento con tasto spazio
+        document.addEventListener('keydown', (e) => {
+            if (e.code === 'Space') {
+                e.preventDefault();
+                toggleMovement();
+            }
+        });
+
+        console.log('🚀 Urban Lab Dashboard avviata!');
+        console.log('💡 Premi SPAZIO per avviare/fermare la simulazione');
+    </script>
+</body>
+</html>
