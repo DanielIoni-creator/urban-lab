@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>🌀 Macchina del Tempo</title>
+    <style>
+        body { background: #0a0a0f; color: #00ffcc; font-family: monospace; padding: 20px; }
+        .container { max-width: 800px; margin: auto; }
+        .status { 
+            background: rgba(0,255,204,0.1); 
+            padding: 20px; 
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 1px solid #00ffcc;
+        }
+        .button {
+            background: #00ffcc;
+            color: #0a0a0f;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px;
+        }
+        .button:hover { opacity: 0.8; }
+        .button.stop { background: #ff0044; color: white; }
+        .data { margin: 10px 0; }
+        .value { color: #00ffcc; font-size: 24px; }
+        h1 { text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌀 MACCHINA DEL TEMPO</h1>
+        <div id="status" class="status">
+            <h2>Stato: <span id="state">IN ATTESA</span></h2>
+            <div class="data">Campo Magnetico: <span id="field" class="value">0</span></div>
+            <div class="data">Wormhole: <span id="wormhole" class="value">CHIUSO</span></div>
+            <div class="data">Tempo Viaggio: <span id="time" class="value">0</span>s</div>
+        </div>
+        <div>
+            <button class="button" onclick="startTravel()">🌀 AVVIA VIAGGIO</button>
+            <button class="button stop" onclick="stopTravel()">⛔ FERMA</button>
+        </div>
+        <p id="log" style="color: #666; font-size: 12px;"></p>
+    </div>
+    <script>
+        function updateStatus() {
+            fetch('/status')
+                .then(r => r.json())
+                .then(data => {
+                    document.getElementById('state').textContent = data.sistema_attivo ? 'VIAGGIO IN CORSO' : 'IN ATTESA';
+                    document.getElementById('field').textContent = data.campo_magnetico;
+                    document.getElementById('wormhole').textContent = data.wormhole_aperto ? 'APERTO' : 'CHIUSO';
+                    document.getElementById('time').textContent = data.tempo_viaggio;
+                });
+        }
+        
+        function startTravel() {
+            fetch('/start', {method: 'POST'})
+                .then(r => r.json())
+                .then(data => {
+                    document.getElementById('log').textContent = '🌀 ' + data.message;
+                    updateStatus();
+                });
+        }
+        
+        function stopTravel() {
+            fetch('/stop', {method: 'POST'})
+                .then(r => r.json())
+                .then(data => {
+                    document.getElementById('log').textContent = '⛔ ' + data.message;
+                    updateStatus();
+                });
+        }
+        
+        setInterval(updateStatus, 1000);
+        updateStatus();
+    </script>
+</body>
+</html>
