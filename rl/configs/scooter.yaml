@@ -1,0 +1,44 @@
+# 🏭 Urban Lab - Configurazione Training RL
+
+# Ambiente
+env:
+  id: ScooterEnv-v0
+  num_envs: 8
+  max_episode_steps: 1000
+
+# Algoritmo (PPO)
+algorithm:
+  name: PPO
+  learning_rate: 3e-4
+  n_steps: 2048
+  batch_size: 64
+  n_epochs: 10
+  gamma: 0.99
+  gae_lambda: 0.95
+  clip_range: 0.2
+  ent_coef: 0.01
+  vf_coef: 0.5
+  max_grad_norm: 0.5
+
+# Rete Neurale
+network:
+  architecture: mlp
+  hidden_layers: [256, 256, 128]
+  activation: tanh
+
+# Training
+training:
+  total_timesteps: 1000000
+  log_interval: 100
+  save_interval: 10000
+  eval_interval: 10000
+
+# Logging
+logging:
+  log_dir: logs/scooter
+  video_interval: 50000
+  checkpoint_interval: 10000
+
+# Hardware
+device: auto
+seed: 42
