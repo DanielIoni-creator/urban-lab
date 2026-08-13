@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏭 Urban Lab - Portale del Tempo Fisico</title>
+    <link rel="stylesheet" href="css/portal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="portal-container">
+        <!-- Sfondo animato -->
+        <div class="time-vortex"></div>
+        
+        <!-- Header -->
+        <header class="portal-header">
+            <div class="logo-container">
+                <span class="logo-icon">🌀</span>
+                <h1>URBAN LAB</h1>
+                <span class="logo-subtitle">PORTALE DEL TEMPO FISICO</span>
+            </div>
+            <div class="portal-status">
+                <div class="status-dot online"></div>
+                <span class="status-text">CONNESSIONE TEMPORALE ATTIVA</span>
+                <span class="timestamp" id="timestamp">--:--:--</span>
+            </div>
+        </header>
+
+        <!-- Main Grid -->
+        <main class="portal-grid">
+            <!-- Card: Dati in Tempo Reale -->
+            <div class="portal-card data-card">
+                <div class="card-header">
+                    <span class="card-icon">📡</span>
+                    <h2>DATI TEMPORALI</h2>
+                    <span class="card-badge">LIVE</span>
+                </div>
+                <div class="card-body">
+                    <div class="data-grid">
+                        <div class="data-item">
+                            <span class="data-label">Velocità</span>
+                            <span class="data-value" id="speed">0.0</span>
+                            <span class="data-unit">km/h</span>
+                        </div>
+                        <div class="data-item">
+                            <span class="data-label">Batteria</span>
+                            <span class="data-value" id="battery">100</span>
+                            <span class="data-unit">%</span>
+                        </div>
+                        <div class="data-item">
+                            <span class="data-label">Temperatura</span>
+                            <span class="data-value" id="temp">25</span>
+                            <span class="data-unit">°C</span>
+                        </div>
+                        <div class="data-item">
+                            <span class="data-label">Tempo Operativo</span>
+                            <span class="data-value" id="uptime">00:00:00</span>
+                            <span class="data-unit">hh:mm:ss</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card: Mappa Temporale -->
+            <div class="portal-card map-card">
+                <div class="card-header">
+                    <span class="card-icon">🌍</span>
+                    <h2>MAPPA TEMPORALE</h2>
+                    <span class="card-badge">4D</span>
+                </div>
+                <div class="card-body">
+                    <div class="map-container" id="timeMap">
+                        <div class="map-placeholder">
+                            <div class="time-ripple"></div>
+                            <div class="coordinates">
+                                <span id="gps-lat">44.0576</span>°N
+                                <span id="gps-lon">12.5653</span>°E
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card: Controlli Temporali -->
+            <div class="portal-card controls-card">
+                <div class="card-header">
+                    <span class="card-icon">🎮</span>
+                    <h2>CONTROLLI TEMPORALI</h2>
+                    <span class="card-badge">INTERATTIVO</span>
+                </div>
+                <div class="card-body">
+                    <div class="controls-grid">
+                        <button class="portal-btn btn-primary" onclick="sendCommand('unlock')">
+                            <span class="btn-icon">🔓</span> SBLOCCO
+                        </button>
+                        <button class="portal-btn btn-danger" onclick="sendCommand('lock')">
+                            <span class="btn-icon">🔒</span> BLOCCO
+                        </button>
+                        <button class="portal-btn btn-warning" onclick="sendCommand('light')">
+                            <span class="btn-icon">💡</span> LUCI
+                        </button>
+                        <button class="portal-btn btn-info" onclick="sendCommand('horn')">
+                            <span class="btn-icon">📢</span> CLACSON
+                        </button>
+                        <button class="portal-btn btn-ai" onclick="sendAICommand()">
+                            <span class="btn-icon">🧠</span> AI ASSISTANT
+                        </button>
+                        <button class="portal-btn btn-mighty" onclick="toggleMighty()">
+                            <span class="btn-icon">🚀</span> MIGHTY
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card: AI Diagnostics -->
+            <div class="portal-card ai-card">
+                <div class="card-header">
+                    <span class="card-icon">🧠</span>
+                    <h2>DIAGNOSTICA AI</h2>
+                    <span class="card-badge">PYTHO</span>
+                </div>
+                <div class="card-body">
+                    <div class="ai-diagnostics" id="aiDiagnostics">
+                        <div class="diagnostic-item">
+                            <span class="diag-icon">✅</span>
+                            <span class="diag-text">Sistema operativo</span>
+                            <span class="diag-status online">ONLINE</span>
+                        </div>
+                        <div class="diagnostic-item">
+                            <span class="diag-icon">✅</span>
+                            <span class="diag-text">Sensori calibrati</span>
+                            <span class="diag-status online">ONLINE</span>
+                        </div>
+                        <div class="diagnostic-item">
+                            <span class="diag-icon">✅</span>
+                            <span class="diag-text">Connessione temporale</span>
+                            <span class="diag-status online">ONLINE</span>
+                        </div>
+                        <div class="diagnostic-item">
+                            <span class="diag-icon">⏳</span>
+                            <span class="diag-text">MIGHTY Planner</span>
+                            <span class="diag-status standby">STANDBY</span>
+                        </div>
+                    </div>
+                    <div class="ai-chat">
+                        <input type="text" id="aiInput" placeholder="Chiedi a Pytho AI..." onkeypress="if(event.key==='Enter') sendAIMessage()">
+                        <button onclick="sendAIMessage()">➤</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card: Timeline Eventi -->
+            <div class="portal-card timeline-card">
+                <div class="card-header">
+                    <span class="card-icon">⏱️</span>
+                    <h2>LINEA TEMPORALE</h2>
+                    <span class="card-badge">EVENTI</span>
+                </div>
+                <div class="card-body">
+                    <div class="timeline" id="timeline">
+                        <div class="timeline-item">
+                            <span class="timeline-time">00:00:00</span>
+                            <span class="timeline-event">🌀 Portale attivato</span>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-time">00:00:05</span>
+                            <span class="timeline-event">📡 Connessione stabilita</span>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-time">00:00:10</span>
+                            <span class="timeline-event">🧠 AI Pytho online</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="portal-footer">
+            <div class="footer-left">
+                <span>🏭 URBAN LAB</span>
+                <span class="footer-divider">|</span>
+                <span>Via Bonsi, Rimini</span>
+                <span class="footer-divider">|</span>
+                <span>v1.0.0</span>
+            </div>
+            <div class="footer-right">
+                <span class="quantum-state" id="quantumState">🟢 QUANTUM STATE: STABLE</span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/portal.js"></script>
+</body>
+</html>

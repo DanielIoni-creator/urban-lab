@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>🏭 Urban Lab - Test Portale</title>
+    <style>
+        body { 
+            font-family: 'Courier New', monospace; 
+            background: #0a0a0f; 
+            color: #00ffcc; 
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .test-box {
+            background: rgba(0,0,0,0.8);
+            border: 1px solid rgba(0,255,204,0.2);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 600px;
+            text-align: center;
+        }
+        h1 { font-size: 48px; margin: 0; }
+        .subtitle { color: #66ffcc; opacity: 0.6; font-size: 14px; letter-spacing: 4px; }
+        .status { 
+            margin: 30px 0;
+            padding: 20px;
+            background: rgba(0,255,204,0.05);
+            border-radius: 10px;
+        }
+        .dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #00ff00;
+            animation: pulse 2s infinite;
+            margin-right: 10px;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.8); }
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: rgba(0,255,204,0.1);
+            border: 1px solid rgba(0,255,204,0.2);
+            border-radius: 10px;
+            color: #00ffcc;
+            text-decoration: none;
+            font-family: 'Courier New', monospace;
+            transition: all 0.3s;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background: rgba(0,255,204,0.2);
+            box-shadow: 0 0 30px rgba(0,255,204,0.1);
+        }
+        .features {
+            text-align: left;
+            margin: 20px 0;
+            padding: 0;
+            list-style: none;
+        }
+        .features li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(0,255,204,0.05);
+            font-size: 14px;
+        }
+        .features li:before {
+            content: "🌀 ";
+        }
+    </style>
+</head>
+<body>
+    <div class="test-box">
+        <div class="dot"></div>
+        <h1>🌀 PORTALE</h1>
+        <div class="subtitle">DEL TEMPO FISICO</div>
+        
+        <div class="status">
+            <div>✅ Sistema operativo</div>
+            <div>✅ Connessione temporale</div>
+            <div>⏳ MIGHTY in attesa</div>
+        </div>
+        
+        <ul class="features">
+            <li>Dati in tempo reale</li>
+            <li>Mappa temporale 4D</li>
+            <li>Controlli interattivi</li>
+            <li>AI Diagnostics</li>
+            <li>Timeline eventi</li>
+        </ul>
+        
+        <a href="index.html" class="btn">🚀 APRI PORTALE</a>
+        <br>
+        <a href="../" class="btn" style="margin-top:10px; font-size:12px;">← Torna al progetto</a>
+    </div>
+</body>
+</html>
