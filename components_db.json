@@ -1,0 +1,29 @@
+﻿{
+  "componenti": {
+    "telaio": {
+      "nome": "Telaio in fibra di carbonio",
+      "codice": "UB-FC-001",
+      "fornitore": "Urban Lab",
+      "costo": 450,
+      "specifiche": "120x40cm, 2.5kg"
+    },
+    "motore": {
+      "nome": "Motore Brushless 800W",
+      "codice": "UB-BL-002",
+      "fornitore": "Bafang",
+      "costo": 180,
+      "specifiche": "48V, 3000 RPM"
+    },
+    "batteria": {
+      "nome": "Batteria LiFePO4 48V",
+      "codice": "UB-BAT-003",
+      "fornitore": "LG",
+      "costo": 320,
+      "specifiche": "20Ah, 1000 cicli"
+    }
+  },
+  "totali": {
+    "componenti": 3,
+    "costo_totale": 950
+  }
+}
