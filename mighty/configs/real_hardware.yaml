@@ -1,0 +1,47 @@
+# 🏭 Urban Lab - Configurazione per Hardware Reale
+
+# Parametri del veicolo reale
+vehicle:
+  type: ground_robot
+  max_speed: 5.0  # m/s (18 km/h) - limitato per sicurezza
+  max_acceleration: 1.5
+  max_deceleration: 2.5
+  wheelbase: 1.2
+  safety_margin: 1.5  # maggiore per sicurezza
+
+# Sensori reali
+sensors:
+  lidar:
+    enabled: true
+    range: 15  # metri
+    resolution: 0.1
+    port: /dev/ttyUSB0
+  imu:
+    enabled: true
+    topic: /imu/data
+  gps:
+    enabled: true
+    topic: /gps/fix
+
+# Comunicazione
+communication:
+  serial:
+    port: /dev/ttyUSB0
+    baudrate: 115200
+  wifi:
+    ssid: UrbanLab_Scooter
+    password: scooter2024
+
+# Controllo
+control:
+  type: mpc
+  horizon: 20
+  dt: 0.05
+  weight_tracking: 1.0
+  weight_smoothness: 0.1
+  
+# Logging
+logging:
+  enabled: true
+  directory: logs/
+  interval: 0.1  # secondi
