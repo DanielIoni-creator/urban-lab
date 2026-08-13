@@ -1,0 +1,18 @@
+=== SPECIFICHE TELAIO URBAN LAB ===
+
+MATERIALE: Fibra di carbonio 3K
+DIMENSIONI:
+- Lunghezza: 1200mm
+- Larghezza: 400mm  
+- Altezza: 1100mm (regolabile 900-1100mm)
+- Peso: <2.5kg
+- Capacità: 150kg
+
+COMPONENTI:
+- Piattaforma: 1200x400x8mm (Fibra Carbonio)
+- Manubrio: 600x30mm (Alluminio 7075-T6)
+- Pieghevole: Sistema a gancio (Acciaio Inox)
+- Attacchi ruota: CNC Alluminio
+
+STATO: Da progettare in Fusion 360
+PRIORITA: ALTA

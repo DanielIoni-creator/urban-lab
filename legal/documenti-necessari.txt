@@ -1,0 +1,23 @@
+=== DOCUMENTAZIONE LEGALE URBAN LAB ===
+
+CERTIFICAZIONI RICHIESTE:
+- [ ] Marcatura CE
+- [ ] Direttiva Macchine 2006/42/CE
+- [ ] Direttiva LVD 2014/35/UE
+- [ ] Direttiva EMC 2014/30/UE
+- [ ] RoHS 2011/65/UE
+
+DOCUMENTI DA PREPARARE:
+- [ ] Dichiarazione di Conformità (DoC)
+- [ ] Manuale utente in italiano
+- [ ] Politica di garanzia
+- [ ] Termini di servizio
+- [ ] Privacy Policy GDPR
+
+ENTI CERTIFICATORI:
+- ECM (Ente Certificazione Macchine)
+- TÜV Italia
+- CSI (Centro Studi Industrie)
+
+STATO: Documenti da redigere
+PRIORITA: ALTA

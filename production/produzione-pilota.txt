@@ -1,0 +1,25 @@
+=== PRODUZIONE PILOTA URBAN LAB ===
+
+OBIETTIVO: Produrre 10 unità pilota
+
+FORNITORI:
+1. Telaio - Urban Lab Prototyping (2 settimane)
+2. Batteria - Battery Tech Italia (3 settimane)
+3. Motore - Bafang Italia (2 settimane)
+4. Elettronica - Mouser (1 settimana)
+
+PROCESSO:
+1. Ordine componenti
+2. Assemblaggio (5 giorni)
+3. Controllo qualità
+4. Test funzionali
+5. Packaging
+
+BUDGET PRODUZIONE:
+- Componenti: €1.510 x 10 = €15.100
+- Manodopera: €3.000
+- Qualità: €1.000
+- TOTALE: €19.100
+
+STATO: Da avviare
+PRIORITA: ALTA

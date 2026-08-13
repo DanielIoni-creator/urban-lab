@@ -1,0 +1,23 @@
+=== SISTEMA PROPULSIONE URBAN LAB ===
+
+MOTORE BRUSHLESS:
+- Tipo: Brushless Outrunner
+- Potenza: 800W (1200W picco)
+- Tensione: 48V
+- RPM: 3000
+- Efficienza: >85%
+
+CONTROLLER VESC:
+- Modello: VESC 60A
+- Supporto: 12S
+- Corrente: 60A
+- Protezioni: Overcurrent, Overvoltage, Overtemp
+
+TEST DA ESEGUIRE:
+- [ ] Test potenza massima (1200W)
+- [ ] Test efficienza (>85%)
+- [ ] Test termico (<60°C)
+- [ ] Test rumorosità (<70dB)
+
+STATO: Componenti da ordinare
+PRIORITA: ALTA
