@@ -1,0 +1,127 @@
+# 🌀 MACCHINA DEL TEMPO - LABELS PER HARDWARE
+
+# PRIORITÀ
+- name: "tm: critical"
+  color: "B60205"
+  description: "🔴 Bloccante - Essenziale per il funzionamento"
+  
+- name: "tm: high"
+  color: "D93F0B"
+  description: "🟡 Alta priorità - Da completare al più presto"
+  
+- name: "tm: medium"
+  color: "FBCA04"
+  description: "🟢 Priorità media - Da pianificare"
+  
+- name: "tm: low"
+  color: "0E8A16"
+  description: "⚪ Bassa priorità - Quando c'è tempo"
+
+# AREA
+- name: "tm: hardware"
+  color: "B60205"
+  description: "🔧 Componenti fisici e struttura"
+  
+- name: "tm: electronics"
+  color: "1D76DB"
+  description: "⚡ Circuiti e componenti elettronici"
+  
+- name: "tm: firmware"
+  color: "D93F0B"
+  description: "📡 Firmware per microcontrollori"
+  
+- name: "tm: software"
+  color: "A2EEEF"
+  description: "💻 Software e interfacce"
+  
+- name: "tm: testing"
+  color: "FBCA04"
+  description: "🧪 Test e calibrazione"
+  
+- name: "tm: documentation"
+  color: "0075CA"
+  description: "📝 Documentazione e guide"
+
+# STATO
+- name: "tm: todo"
+  color: "FBCA04"
+  description: "⏳ Da fare"
+  
+- name: "tm: in-progress"
+  color: "5319E7"
+  description: "🔧 In corso"
+  
+- name: "tm: review"
+  color: "F9D0C4"
+  description: "👀 In revisione"
+  
+- name: "tm: done"
+  color: "0E8A16"
+  description: "✅ Completato"
+  
+- name: "tm: blocked"
+  color: "B60205"
+  description: "🚫 Bloccato - Serve aiuto"
+
+# COMPLESSITÀ
+- name: "tm: easy"
+  color: "0E8A16"
+  description: "😊 Facile - Per tutti"
+  
+- name: "tm: medium"
+  color: "FBCA04"
+  description: "🤔 Media - Richiede esperienza"
+  
+- name: "tm: hard"
+  color: "B60205"
+  description: "💪 Difficile - Richiede expertise"
+  
+- name: "tm: expert"
+  color: "D93F0B"
+  description: "🔥 Esperto - Alto livello di competenza"
+
+# CATEGORIE SPECIFICHE
+- name: "tm: mechanical"
+  color: "5319E7"
+  description: "⚙️ Lavori meccanici e struttura"
+  
+- name: "tm: electrical"
+  color: "1D76DB"
+  description: "⚡ Lavori elettrici e cablaggio"
+  
+- name: "tm: magnetic"
+  color: "A2EEEF"
+  description: "🧲 Campi magnetici e bobine"
+  
+- name: "tm: programming"
+  color: "F9D0C4"
+  description: "💻 Programmazione e codifica"
+  
+- name: "tm: safety"
+  color: "B60205"
+  description: "🛡️ Sicurezza e protezione"
+  
+- name: "tm: integration"
+  color: "FBCA04"
+  description: "🔗 Integrazione dei componenti"
+
+# MILESTONE
+- name: "milestone: hardware-base"
+  color: "B60205"
+  description: "🏗️ Milestone Hardware Base"
+  
+- name: "milestone: electronics"
+  color: "D93F0B"
+  description: "⚡ Milestone Elettronica"
+  
+- name: "milestone: software"
+  color: "1D76DB"
+  description: "💻 Milestone Software"
+  
+- name: "milestone: testing"
+  color: "FBCA04"
+  description: "🧪 Milestone Testing"
+  
+- name: "milestone: deployment"
+  color: "0E8A16"
+  description: "🚀 Milestone Deploy"

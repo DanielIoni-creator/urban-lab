@@ -1,0 +1,25 @@
+#!/bin/bash
+# 📊 URBAN LAB - Tracker Budget Macchina del Tempo
+
+echo "📊 URBAN LAB - BUDGET MACCHINA DEL TEMPO"
+echo "========================================"
+echo ""
+echo "💰 BUDGET PREVENTIVO: €1,525"
+echo ""
+echo "📋 CATEGORIE:"
+echo "   🔧 Struttura Meccanica: €250"
+echo "   ⚡ Elettromagnetica: €395"
+echo "   💻 Controllo: €235"
+echo "   🧲 Sensori: €40"
+echo "   🔋 Alimentazione: €680"
+echo "   🛠️ Attrezzatura: €85"
+echo "   📦 TOTALE: €1,685"
+echo ""
+echo "📊 STATO ACQUISTI:"
+echo "   [ ] Componenti acquistati: 0/20"
+echo "   [ ] Speso: €0"
+echo "   [ ] Residuo: €1,685"
+echo ""
+echo "🔄 AGGIORNAMENTO:"
+read -p "Aggiungi spesa (€): " spesa
+echo "💰 Spesa aggiunta: €$spesa"
