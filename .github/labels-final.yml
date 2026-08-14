@@ -1,0 +1,102 @@
+# 🏁 URBAN LAB - LABELS PER LE ISSUE FINALI
+
+# STATO
+- name: "final: hardware"
+  color: "B60205"
+  description: "🔧 Assemblaggio e montaggio hardware"
+  
+- name: "final: firmware"
+  color: "D93F0B"
+  description: "📡 Caricamento e test firmware"
+  
+- name: "final: testing"
+  color: "FBCA04"
+  description: "🧪 Test e calibrazione sistema"
+  
+- name: "final: software"
+  color: "1D76DB"
+  description: "💻 Software e integrazione"
+  
+- name: "final: documentation"
+  color: "0075CA"
+  description: "📝 Documentazione e video"
+  
+- name: "final: deployment"
+  color: "0E8A16"
+  description: "🚀 Deploy e collaudo finale"
+
+# PRIORITÀ
+- name: "final: critical"
+  color: "B60205"
+  description: "🔴 Bloccante - Deve essere completato subito"
+  
+- name: "final: high"
+  color: "D93F0B"
+  description: "🟡 Alta priorità - Da completare al più presto"
+  
+- name: "final: medium"
+  color: "FBCA04"
+  description: "🟢 Priorità media - Da pianificare"
+  
+- name: "final: low"
+  color: "0E8A16"
+  description: "⚪ Bassa priorità - Quando c'è tempo"
+
+# COMPLETAMENTO
+- name: "final: ready"
+  color: "0E8A16"
+  description: "✅ Pronto per il test finale"
+  
+- name: "final: in-progress"
+  color: "FBCA04"
+  description: "⏳ In corso di completamento"
+  
+- name: "final: blocked"
+  color: "B60205"
+  description: "🚫 Bloccato - Serve aiuto"
+  
+- name: "final: done"
+  color: "0E8A16"
+  description: "🎉 Completato con successo"
+
+# CATEGORIE
+- name: "final: assembly"
+  color: "5319E7"
+  description: "🔧 Assemblaggio fisico"
+  
+- name: "final: calibration"
+  color: "F9D0C4"
+  description: "📊 Calibrazione sensori"
+  
+- name: "final: road-test"
+  color: "1D76DB"
+  description: "🛣️ Test su strada"
+  
+- name: "final: performance"
+  color: "A2EEEF"
+  description: "📈 Test prestazioni"
+  
+- name: "final: video"
+  color: "7057FF"
+  description: "🎥 Contenuti video"
+  
+- name: "final: publish"
+  color: "008672"
+  description: "📤 Pubblicazione e condivisione"
+
+# MILESTONE
+- name: "milestone: hardware"
+  color: "B60205"
+  description: "🏗️ Milestone Hardware"
+  
+- name: "milestone: testing"
+  color: "FBCA04"
+  description: "🧪 Milestone Testing"
+  
+- name: "milestone: validation"
+  color: "0E8A16"
+  description: "✅ Milestone Validazione"
+  
+- name: "milestone: release"
+  color: "1D76DB"
+  description: "🚀 Milestone Release"

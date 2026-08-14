@@ -1,0 +1,131 @@
+# 🏭 URBAN LAB - LABELS PER LE ISSUE
+
+# PRIORITÀ
+- name: "priority: critical"
+  color: "B60205"
+  description: "🚨 Bloccante - Deve essere risolto immediatamente"
+  
+- name: "priority: high"
+  color: "D93F0B"
+  description: "🔴 Alta priorità - Da risolvere al più presto"
+  
+- name: "priority: medium"
+  color: "FBCA04"
+  description: "🟡 Priorità media - Da pianificare"
+  
+- name: "priority: low"
+  color: "0E8A16"
+  description: "🟢 Bassa priorità - Quando c'è tempo"
+
+# TIPOLOGIA
+- name: "type: bug"
+  color: "B60205"
+  description: "🐛 Bug o errore da correggere"
+  
+- name: "type: feature"
+  color: "1D76DB"
+  description: "✨ Nuova funzionalità"
+  
+- name: "type: enhancement"
+  color: "A2EEEF"
+  description: "🔧 Miglioramento di funzionalità esistente"
+  
+- name: "type: documentation"
+  color: "0075CA"
+  description: "📝 Documentazione o guide"
+  
+- name: "type: testing"
+  color: "F9D0C4"
+  description: "🧪 Test e QA"
+  
+- name: "type: research"
+  color: "5319E7"
+  description: "🔬 Ricerca e analisi"
+
+# AREA
+- name: "area: 3d-printing"
+  color: "FBCA04"
+  description: "🖨️ Stampa 3D e modelli"
+  
+- name: "area: firmware"
+  color: "B60205"
+  description: "📡 Firmware ESP32 e sensori"
+  
+- name: "area: rl"
+  color: "1D76DB"
+  description: "🧠 Reinforcement Learning e AI"
+  
+- name: "area: app"
+  color: "0E8A16"
+  description: "📱 App mobile React Native"
+  
+- name: "area: dashboard"
+  color: "5319E7"
+  description: "🌐 Dashboard web"
+  
+- name: "area: legal"
+  color: "F9D0C4"
+  description: "⚖️ Documentazione legale"
+  
+- name: "area: hardware"
+  color: "D93F0B"
+  description: "🔧 Hardware e componenti"
+  
+- name: "area: documentation"
+  color: "0075CA"
+  description: "📚 Documentazione generale"
+
+# STATO
+- name: "status: done"
+  color: "0E8A16"
+  description: "✅ Completato"
+  
+- name: "status: in-progress"
+  color: "FBCA04"
+  description: "⏳ In corso"
+  
+- name: "status: blocked"
+  color: "B60205"
+  description: "🚫 Bloccato"
+  
+- name: "status: review"
+  color: "5319E7"
+  description: "👀 In revisione"
+  
+- name: "status: needs-help"
+  color: "D93F0B"
+  description: "🆘 Serve aiuto"
+
+# COMPLESSITÀ
+- name: "complexity: easy"
+  color: "0E8A16"
+  description: "😊 Facile - Adatto per beginners"
+  
+- name: "complexity: medium"
+  color: "FBCA04"
+  description: "🤔 Media - Richiede esperienza"
+  
+- name: "complexity: hard"
+  color: "B60205"
+  description: "💪 Difficile - Richiede expertise"
+
+# ALTRI
+- name: "good first issue"
+  color: "7057FF"
+  description: "🎯 Buona prima issue per contributori"
+  
+- name: "help wanted"
+  color: "008672"
+  description: "🙏 Richiede contributi esterni"
+  
+- name: "duplicate"
+  color: "CFD3D7"
+  description: "🔄 Duplicato di un'altra issue"
+  
+- name: "invalid"
+  color: "CFD3D7"
+  description: "❌ Non valida"
+  
+- name: "wontfix"
+  color: "CFD3D7"
+  description: "📌 Non verrà risolta"
