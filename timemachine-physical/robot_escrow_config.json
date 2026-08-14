@@ -1,0 +1,52 @@
+{
+  "ecosystem": "Urban Lab Robotics",
+  "owner_wallet": "45M4DW1ug8bdQowWpxucTpgsfjLbVxbYaAra79VewmBobuuhgqTjyD4R3DzpqLM2veiphcB16n24qN1QbLg3y2PYGK3Qkoe",
+  "multisig": {
+    "threshold": 2,
+    "signers": 3,
+    "fee_percent": 0.5
+  },
+  "robots": {
+    "pytho": {
+      "name": "Pytho AI",
+      "enabled": true,
+      "escrow": true
+    },
+    "monopattino": {
+      "name": "Urban Lab Scooter",
+      "enabled": true,
+      "escrow": true
+    },
+    "myzubster": {
+      "name": "MyZubster Robot",
+      "enabled": true,
+      "escrow": true
+    },
+    "mighty": {
+      "name": "MIGHTY Planner",
+      "enabled": true,
+      "escrow": true
+    }
+  },
+  "services": {
+    "noleggio": {
+      "price": 25,
+      "unit": "XMR",
+      "escrow_required": true
+    },
+    "riparazione": {
+      "price": 80,
+      "unit": "XMR",
+      "escrow_required": true
+    },
+    "vendita": {
+      "price": 600,
+      "unit": "XMR",
+      "escrow_required": true
+    }
+  },
+  "api": {
+    "escrow_url": "http://localhost:5002/api/escrow",
+    "health_url": "http://localhost:5002/health"
+  }
+}
