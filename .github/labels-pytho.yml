@@ -1,0 +1,119 @@
+# 🧠 PYTHO AI - LABELS PER L'INTEGRAZIONE
+
+# PRIORITÀ
+- name: "pytho: critical"
+  color: "B60205"
+  description: "🔴 Essenziale per il funzionamento di Pytho AI"
+  
+- name: "pytho: high"
+  color: "D93F0B"
+  description: "🟡 Alta priorità - Migliora l'esperienza AI"
+  
+- name: "pytho: medium"
+  color: "FBCA04"
+  description: "🟢 Priorità media - Funzionalità aggiuntive"
+  
+- name: "pytho: low"
+  color: "0E8A16"
+  description: "⚪ Bassa priorità - Ottimizzazioni future"
+
+# AREA
+- name: "pytho: core"
+  color: "1D76DB"
+  description: "🧠 Nucleo dell'assistente AI"
+  
+- name: "pytho: chat"
+  color: "A2EEEF"
+  description: "💬 Interfaccia conversazionale"
+  
+- name: "pytho: physics"
+  color: "5319E7"
+  description: "🔬 Fisica e calcoli relativistici"
+  
+- name: "pytho: integration"
+  color: "F9D0C4"
+  description: "🔗 Integrazione con Macchina del Tempo"
+  
+- name: "pytho: ui"
+  color: "0075CA"
+  description: "🎨 Interfaccia utente e design"
+  
+- name: "pytho: documentation"
+  color: "0E8A16"
+  description: "📚 Documentazione e guide"
+
+# STATO
+- name: "pytho: todo"
+  color: "FBCA04"
+  description: "⏳ Da implementare"
+  
+- name: "pytho: in-progress"
+  color: "5319E7"
+  description: "🔧 In fase di sviluppo"
+  
+- name: "pytho: review"
+  color: "F9D0C4"
+  description: "👀 In revisione"
+  
+- name: "pytho: done"
+  color: "0E8A16"
+  description: "✅ Completato"
+  
+- name: "pytho: blocked"
+  color: "B60205"
+  description: "🚫 Bloccato - Necessita di AI training"
+
+# COMPLESSITÀ
+- name: "pytho: easy"
+  color: "0E8A16"
+  description: "😊 Facile - Aggiungere risposte"
+  
+- name: "pytho: medium"
+  color: "FBCA04"
+  description: "🤔 Media - Integrare nuove API"
+  
+- name: "pytho: hard"
+  color: "B60205"
+  description: "💪 Difficile - AI Training"
+  
+- name: "pytho: expert"
+  color: "D93F0B"
+  description: "🔥 Esperto - Machine Learning"
+
+# CATEGORIE SPECIFICHE
+- name: "pytho: knowledge"
+  color: "5319E7"
+  description: "📚 Knowledge base e fatti"
+  
+- name: "pytho: personality"
+  color: "A2EEEF"
+  description: "🧠 Personalità e tono di voce"
+  
+- name: "pytho: forecasting"
+  color: "1D76DB"
+  description: "🔮 Previsioni e analisi future"
+  
+- name: "pytho: safety"
+  color: "B60205"
+  description: "🛡️ Sicurezza e controlli AI"
+  
+- name: "pytho: performance"
+  color: "FBCA04"
+  description: "⚡ Velocità e ottimizzazione"
+
+# MILESTONE
+- name: "milestone: pytho-core"
+  color: "1D76DB"
+  description: "🧠 Milestone Nucleo Pytho"
+  
+- name: "milestone: pytho-chat"
+  color: "A2EEEF"
+  description: "💬 Milestone Chat Interattiva"
+  
+- name: "milestone: pytho-integration"
+  color: "F9D0C4"
+  description: "🔗 Milestone Integrazione"
+  
+- name: "milestone: pytho-release"
+  color: "0E8A16"
+  description: "🚀 Milestone Rilascio Pytho"
