@@ -1,0 +1,31 @@
+{
+  "pytho": {
+    "name": "Pytho AI",
+    "wallet": "45M4DW1ug8bdQowWpxucTpgsfjLbVxbYaAra79VewmBobuuhgqTjyD4R3DzpqLM2veiphcB16n24qN1QbLg3y2PYGK3Qkoe",
+    "multisig": {
+      "threshold": 2,
+      "signers": 3,
+      "fee_percent": 0.5
+    }
+  },
+  "escrow": {
+    "api_url": "http://localhost:5002",
+    "timeout_hours": 24,
+    "min_amount": 0.1,
+    "max_amount": 1000
+  },
+  "services": {
+    "noleggio": {
+      "price": 25,
+      "description": "Noleggio Monopattino Smart"
+    },
+    "riparazione": {
+      "price": 80,
+      "description": "Riparazione Express"
+    },
+    "vendita": {
+      "price": 600,
+      "description": "Limited Edition"
+    }
+  }
+}
